@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-  
+
 body {
   background: #333;
   color: whitesmoke;
@@ -37,7 +37,7 @@ li {
   clear: both;
 }
 
-.brand{
+.brand {
   padding-top: 25px;
   float: left;
 }
@@ -57,18 +57,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background:#444444;
+  background: #444444;
   color: #F7BF8A;
 }
 
 .active {
-  background:#444444;
+  background: #444444;
   color: #F7BF8A;
 }
 
 .full-bg {
-  background: url(../img/showcase.jpg) no-repeat center center/cover; /*Hor: center; vert: center; size: cover*/
-  height: 600px; 
+  background: url(../img/showcase.jpg) no-repeat center center/cover;
+  /*Hor: center; vert: center; size: cover*/
+  height: 600px;
 }
 
 .full-width {
@@ -95,36 +96,43 @@ p.subtitle {
   margin-bottom: 30px;
 }
 
-.btn-showcase{
+.btn-showcase {
   display: inline-block;
   font-size: 1.1rem;
   background: #444444;
   padding: 15px 30px;
 }
 
-.btn-showcase:hover{
+.btn-showcase:hover {
   background: rgb(32, 31, 32);
   color: #F7BF8A;
 }
 
 .history {
-  height: 400px;
-  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history__img--wrap {
+  flex-basis: 45%;
+  background: url('../img/photo-1.jpg') center center / cover;
+  min-height: 300px;
+
 }
 
 .history img {
-  float: left;
-  width: 50%;
+  max-width: 100%;
 }
 
 .history .historyInfo {
-  float: right;
-  width: 50%;
+  flex-basis: 50%;
   padding: 60px 25px;
 }
 
 .history h3 {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .btn-info {
@@ -139,18 +147,22 @@ p.subtitle {
   background: #F7BF8A;
 }
 
+.usp {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .usp article {
-  width: 33.3%;
-  float: left;
+  flex-basis: 33.3%;
   padding: 30px 15px;
 }
 
-.usp article:nth-child(odd){
+.usp article:nth-child(odd) {
   background: whitesmoke;
   color: #333;
-} 
+}
 
-.usp article:nth-child(even){
+.usp article:nth-child(even) {
   background: #F7BF8A;
   color: #333;
 }
@@ -159,12 +171,13 @@ p.subtitle {
   margin-bottom: 40px;
 }
 
-.icon { 
+.icon {
   font-size: 4em;
   color: black;
 }
 
-.about, .contact {
+.about,
+.contact {
   padding: 30px 0;
   background: #fff;
   color: #333;
@@ -183,13 +196,15 @@ p.subtitle {
   padding-left: 100px;
 }
 
-.about img, .reviews img {
+.about img,
+.reviews img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 50%;
 }
 
-.about h2, .contact h2  {
+.about h2,
+.contact h2 {
   font-size: 3em;
   height: auto;
 
@@ -233,9 +248,11 @@ p.subtitle {
 /* CONTACT */
 .formSection {
   padding: 20px 0;
+  margin: 50px;
 }
 
-.formSection input, textarea {
+.formSection input,
+textarea {
   display: block;
   width: 100%;
   border-radius: 1px;
@@ -246,7 +263,9 @@ p.subtitle {
   resize: none;
 }
 
-input:focus, textarea:focus, input:active {
+input:focus,
+textarea:focus,
+input:active {
   outline: none;
   border: 1px solid #F7BF8A;
 }
@@ -255,15 +274,14 @@ input:focus, textarea:focus, input:active {
   display: block;
   margin: auto;
   background: #444444;
-  width: 15%;
-  height: 45px;
+  padding: 1rem 2rem;
   color: whitesmoke;
   font-size: 2em;
   font-weight: 300;
   border: none;
 }
 
-#usp-contact article{
+#usp-contact article {
   background: #333;
   color: whitesmoke;
 }
@@ -281,4 +299,17 @@ footer {
 footer p {
   padding: 20px 0;
   margin: 0;
+}
+
+@media(max-width: 600px) {
+
+  .usp article,
+  .history__img--wrap,
+  .history .historyInfo {
+    flex-basis: 100%;
+  }
+
+  /* form {
+  width: 0vw
+} */
 }
